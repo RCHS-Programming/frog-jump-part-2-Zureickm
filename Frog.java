@@ -47,6 +47,27 @@ public class Frog extends Actor
         
         //Check for the down key
         
+           if( isDownPress == false && Greenfoot.isKeyDown("down") && getY() < 540)
+        {
+            setLocation( getX() , getY() + 60);
+            isDownPress = true;
+        }
+        
+        if( isDownPress && !Greenfoot.isKeyDown("down"))
+        {
+            isDownPress = false;
+        }
+        
+        if( isRightPress == false && Greenfoot.isKeyDown("Right") && getY() < 540)
+        {
+            setLocation( getX()+60 , getY());
+            isRightPress = true;
+        }
+        
+        if( isRightPress && !Greenfoot.isKeyDown("right"))
+        {
+            isRightPress = false;
+        }
         
         
         
