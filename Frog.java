@@ -60,13 +60,24 @@ public class Frog extends Actor
         
         if( isRightPress == false && Greenfoot.isKeyDown("Right") && getY() < 540)
         {
-            setLocation( getX()+60 , getY());
+            setLocation( getX() + 60 , getY());
             isRightPress = true;
         }
         
         if( isRightPress && !Greenfoot.isKeyDown("right"))
         {
             isRightPress = false;
+        }
+       
+        if( isLeftPress == false && Greenfoot.isKeyDown("left") && getY() < 540)
+        {
+            setLocation( getX() - 60 , getY());
+            isLeftPress = true;
+        }
+        
+        if( isLeftPress && !Greenfoot.isKeyDown("left"))
+        {
+            isLeftPress = false;
         }
         
         
